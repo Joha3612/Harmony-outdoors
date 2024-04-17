@@ -1,190 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harmony Outdoors</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #6ab04c, #448e39);
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #6ab04c;
-        }
-
-        section {
-            padding: 40px;
-            text-align: center;
-        }
-
-        .product {
-            margin-bottom: 50px;
-        }
-
-        footer {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            text-align: center;
-            color: #333;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .social-icons {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        .social-icons li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        #contactForm {
-            max-width: 400px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        #contactForm label {
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        #contactForm input,
-        #contactForm textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        #contactForm input[type="submit"] {
-            background-color: #6ab04c;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        #contactForm input[type="submit"]:hover {
-            background-color: #448e39;
-        }
-
-        .message {
-            font-weight: bold;
-            color: #6ab04c;
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmony Outdoors</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #7ed56f, #28b485);
+    color: #333;
+    line-height: 1.6;
+  }
+  header {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  nav {
+    text-align: center;
+  }
+  nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+  .product {
+    margin-bottom: 20px;
+  }
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .contact-form {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .contact-form button {
+    background: #28b485;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#about">About Us</a>
+  </nav>
+</header>
 
-    <section id="home">
-        <!-- Home content here -->
-        <h2>Welcome to Harmony Outdoors</h2>
-        <p>Explore our collection of high-quality camping gear designed to enhance your outdoor experience.</p>
-    </section>
+<section>
+  <div class="product">
+    <h2>Tent</h2>
+    <p>Weight: 3.5 kg</p>
+    <p>Capacity: 4 people</p>
+    <p>Material: Nylon</p>
+    <img src="tent.jpg" alt="Tent">
+  </div>
+  <div class="product">
+    <h2>Sleeping Bag</h2>
+    <p>Weight: 1.2 kg</p>
+    <p>Temperature Rating: -5°C</p>
+    <p>Material: Down</p>
+    <img src="sleeping_bag.jpg" alt="Sleeping Bag">
+  </div>
+</section>
 
-    <section id="products">
-        <!-- Products content here -->
-        <div class="product">
-            <img src="camping-gear-1.jpg" alt="Camping Gear 1">
-            <h3>Ultra-Light Sleeping Bag</h3>
-            <p>Stay warm and cozy with our ultra-light sleeping bag, weighing only 1.5 lbs. Made from durable ripstop nylon.</p>
-            <p>Weight: 1.5 lbs | Capacity: 1 person | Material: Ripstop Nylon</p>
-        </div>
-        <div class="product">
-            <img src="camping-gear-2.jpg" alt="Camping Gear 2">
-            <h3>Waterproof Tent</h3>
-            <p>Experience ultimate protection from the elements with our waterproof tent. Spacious enough for 2 people.</p>
-            <p>Weight: 3.2 lbs | Capacity: 2 people | Material: Waterproof Polyester</p>
-        </div>
-        <div class="product">
-            <img src="camping-gear-3.jpg" alt="Camping Gear 3">
-            <h3>Portable Camping Stove</h3>
-            <p>Cook delicious meals outdoors with our portable camping stove. Compact and easy to use.</p>
-            <p>Weight: 2 lbs | Material: Stainless Steel</p>
-        </div>
-    </section>
+<footer class="footer">
+  <p>&copy; 2024 Harmony Outdoors</p>
+  <a href="#"><img src="facebook.png" alt="Facebook"></a>
+  <a href="#"><img src="twitter.png" alt="Twitter"></a>
+  <a href="#"><img src="instagram.png" alt="Instagram"></a>
+</footer>
 
-    <section id="about">
-        <!-- About Us content here -->
-        <h2>About Harmony Outdoors</h2>
-        <p>Harmony Outdoors is dedicated to providing outdoor enthusiasts with the best camping gear on the market. Contact us to learn more!</p>
-        <form id="contactForm">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
-        <div class="message" id="thankYouMessage"></div>
-    </section>
+<section id="about">
+  <h2>About Us</h2>
+  <p>Welcome to Harmony Outdoors! We provide high-quality camping gear for outdoor enthusiasts. Contact us for any inquiries.</p>
+  <div class="contact-form">
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="thankYou" style="display: none;">Thank you for contacting us!</div>
+  </div>
+</section>
 
-    <footer>
-        <ul class="social-icons">
-            <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="twitter-icon.png" alt="Twitter"></a></li>
-            <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
-        </ul>
-        <p>&copy; 2024 Harmony Outdoors. All rights reserved.</p>
-    </footer>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('thankYou').style.display = 'block';
+    document.getElementById('contactForm').reset();
+  });
+</script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contactForm');
-            const thankYouMessage = document.getElementById('thankYouMessage');
-
-            contactForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                // Logic to handle form submission
-                thankYouMessage.textContent = 'Thank you for getting in touch with Harmony Outdoors!';
-                contactForm.reset();
-            });
-        });
-    </script>
 </body>
 </html>
