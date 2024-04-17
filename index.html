@@ -4,7 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harmony Outdoors</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: linear-gradient(to bottom right, #6ab04c, #448e39);
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        footer {
+            background: linear-gradient(to bottom right, #6ab04c, #448e39);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .social-icons {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .social-icons li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        #contactForm {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        #contactForm label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #contactForm input,
+        #contactForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #contactForm input[type="submit"] {
+            background-color: #6ab04c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #contactForm input[type="submit"]:hover {
+            background-color: #448e39;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -47,90 +123,16 @@
         <p>&copy; 2024 Harmony Outdoors. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                // Logic to handle form submission
+                alert('Thank you for getting in touch with Harmony Outdoors!');
+                contactForm.reset();
+            });
+        });
+    </script>
 </body>
 </html>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background: linear-gradient(to bottom right, #6ab04c, #448e39);
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-section {
-    padding: 40px;
-}
-
-footer {
-    background: linear-gradient(to bottom right, #6ab04c, #448e39);
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-.social-icons {
-    list-style-type: none;
-    padding: 0;
-}
-
-.social-icons li {
-    display: inline;
-    margin-right: 10px;
-}
-
-#contactForm {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-#contactForm label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-#contactForm input,
-#contactForm textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-#contactForm input[type="submit"] {
-    background-color: #6ab04c;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#contactForm input[type="submit"]:hover {
-    background-color: #448e39;
-}
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        // Logic to handle form submission
-        alert('Thank you for getting in touch with Harmony Outdoors!');
-        contactForm.reset();
-    });
-});
