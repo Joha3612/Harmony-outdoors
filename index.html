@@ -8,12 +8,14 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #6ab04c, #448e39);
         }
 
         header {
-            background: linear-gradient(to bottom right, #6ab04c, #448e39);
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -28,24 +30,36 @@
 
         nav ul li a {
             text-decoration: none;
-            color: white;
+            color: #333;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #6ab04c;
         }
 
         section {
             padding: 40px;
+            text-align: center;
+        }
+
+        .product {
+            margin-bottom: 50px;
         }
 
         footer {
-            background: linear-gradient(to bottom right, #6ab04c, #448e39);
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             text-align: center;
-            color: white;
+            color: #333;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .social-icons {
             list-style-type: none;
             padding: 0;
+            margin-top: 20px;
         }
 
         .social-icons li {
@@ -56,11 +70,16 @@
         #contactForm {
             max-width: 400px;
             margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         #contactForm label {
             display: block;
             margin-bottom: 5px;
+            color: #333;
         }
 
         #contactForm input,
@@ -68,17 +87,25 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
         }
 
         #contactForm input[type="submit"] {
             background-color: #6ab04c;
-            color: white;
+            color: #fff;
             border: none;
             cursor: pointer;
         }
 
         #contactForm input[type="submit"]:hover {
             background-color: #448e39;
+        }
+
+        .message {
+            font-weight: bold;
+            color: #6ab04c;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -95,14 +122,36 @@
 
     <section id="home">
         <!-- Home content here -->
+        <h2>Welcome to Harmony Outdoors</h2>
+        <p>Explore our collection of high-quality camping gear designed to enhance your outdoor experience.</p>
     </section>
 
     <section id="products">
         <!-- Products content here -->
+        <div class="product">
+            <img src="camping-gear-1.jpg" alt="Camping Gear 1">
+            <h3>Ultra-Light Sleeping Bag</h3>
+            <p>Stay warm and cozy with our ultra-light sleeping bag, weighing only 1.5 lbs. Made from durable ripstop nylon.</p>
+            <p>Weight: 1.5 lbs | Capacity: 1 person | Material: Ripstop Nylon</p>
+        </div>
+        <div class="product">
+            <img src="camping-gear-2.jpg" alt="Camping Gear 2">
+            <h3>Waterproof Tent</h3>
+            <p>Experience ultimate protection from the elements with our waterproof tent. Spacious enough for 2 people.</p>
+            <p>Weight: 3.2 lbs | Capacity: 2 people | Material: Waterproof Polyester</p>
+        </div>
+        <div class="product">
+            <img src="camping-gear-3.jpg" alt="Camping Gear 3">
+            <h3>Portable Camping Stove</h3>
+            <p>Cook delicious meals outdoors with our portable camping stove. Compact and easy to use.</p>
+            <p>Weight: 2 lbs | Material: Stainless Steel</p>
+        </div>
     </section>
 
     <section id="about">
         <!-- About Us content here -->
+        <h2>About Harmony Outdoors</h2>
+        <p>Harmony Outdoors is dedicated to providing outdoor enthusiasts with the best camping gear on the market. Contact us to learn more!</p>
         <form id="contactForm">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br>
@@ -112,13 +161,14 @@
             <textarea id="message" name="message" required></textarea><br>
             <input type="submit" value="Submit">
         </form>
+        <div class="message" id="thankYouMessage"></div>
     </section>
 
     <footer>
         <ul class="social-icons">
-            <li><a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a></li>
-            <li><a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="twitter-icon.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
         </ul>
         <p>&copy; 2024 Harmony Outdoors. All rights reserved.</p>
     </footer>
@@ -126,10 +176,12 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const contactForm = document.getElementById('contactForm');
+            const thankYouMessage = document.getElementById('thankYouMessage');
+
             contactForm.addEventListener('submit', function(event) {
                 event.preventDefault();
                 // Logic to handle form submission
-                alert('Thank you for getting in touch with Harmony Outdoors!');
+                thankYouMessage.textContent = 'Thank you for getting in touch with Harmony Outdoors!';
                 contactForm.reset();
             });
         });
