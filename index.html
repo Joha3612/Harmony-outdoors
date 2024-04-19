@@ -63,8 +63,6 @@
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    /* Increased contrast for better accessibility */
-    border: 2px solid #28b485;
   }
 </style>
 </head>
@@ -106,12 +104,9 @@
   <p>Welcome to Harmony Outdoors! We provide high-quality camping gear for outdoor enthusiasts. Contact us for any inquiries.</p>
   <div class="contact-form">
     <form id="contactForm">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required><br>
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required><br>
-      <label for="message">Your Message:</label>
-      <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea><br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea><br>
       <button type="submit">Submit</button>
     </form>
     <div id="thankYou" style="display: none;">Thank you for contacting us!</div>
